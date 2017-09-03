@@ -9,11 +9,16 @@ class ONG(models.Model):
 
     # dummy data
     # import from http://www.ongsbrasil.com.br/
-    OPTIONS = (
+    CITY_OPTIONS = (
         ('B', 'Baependi'),
         ('S', 'Santa Rita do Sapucai'),
     )
-    cities = models.CharField(max_length=2, choices=OPTIONS, default="B")
-    spec = models.CharField(max_length=2, choices=OPTIONS, default="B")
-    # longitude = forms.CharField(max_length=128)
-    # latitude = forms.CharField(max_length=128)
+    SORT_OPTIONS = (
+        ('MA', 'do Meio Ambiente'),
+        ('A', 'dos Animais'),
+    )
+    city = models.CharField(max_length=2, choices=CITY_OPTIONS, default="B")
+    sort = models.CharField(max_length=2, choices=SORT_OPTIONS, default="B")
+    lat = models.FloatField(verbose_name = 'Latitude', max_length=3)
+    lng = models.FloatField(verbose_name = 'Longitude', max_length=3)
+    location = [lat, lng]
