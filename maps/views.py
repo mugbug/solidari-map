@@ -1,3 +1,5 @@
+import requests
+
 from django.shortcuts import render
 from django.views.generic.base import TemplateView, RedirectView
 from django.views.generic.edit import CreateView
@@ -10,11 +12,19 @@ from maps.models import ONG
 # Create your views here.
 
 def show_map(request):
+    api_url = 'https://maps.googleapis.com/maps/api/geocode/json?'
+    parameters = 'address=Av+Marechal+Castelo+Branco+400,+Santa+Filomena,+Pouso+Alegre,+MG&'
+    api_key = 'key=AIzaSyAokIWXfyu8eTgvJTEtrS_5e32FiMznq2s'
+    url = api_url + parameters + api_key
 
+    r = requests.get(url)
+    jdata = r.json()
+    lat = float(jdata['results'][0]['geometry']['location']['lat'])
+    lng = float(jdata['results'][0]['geometry']['location']['lng'])
+    # import ipdb; ipdb.set_trace()
     locations = [
         {'lat': -22.2526, 'lng': -45.7042},
-        {'lat': -21.4123, 'lng': -44.4412},
-        {'lat': -22.0000, 'lng': -44.5000},
+        {'lat': lat, 'lng': lng},
     ]
     return render(request, 'map.html', {'locations': locations})
 
