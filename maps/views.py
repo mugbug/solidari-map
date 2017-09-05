@@ -28,6 +28,8 @@ def show_map(request):
     ]
     return render(request, 'map.html', {'locations': locations})
 
+def index(request):
+    return render(request, 'main-page-dev.html')
 # class MapView(CreateView):
 #     model = ONG
     # template_name = 'map.html'

@@ -1,0 +1,20 @@
+.img-bg-start {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-height: auto\9; 
+}
+
+.title_logo {
+    position: absolute;
+    width: 30%;
+    right: 35%;
+    top: 40%;
+}
+
+.know-our-project-btn {
+    position: absolute;
+    width: 30%;
+    right: 35%;
+    top: 52%;
+}
