@@ -11,7 +11,10 @@ from maps.models import ONG
 
 # Create your views here.
 
-def show_map(request):
+def index(request):
+
+    # should get data from web and create url
+    # dummy data
     api_url = 'https://maps.googleapis.com/maps/api/geocode/json?'
     parameters = 'address=Av+Marechal+Castelo+Branco+400,+Santa+Filomena,+Pouso+Alegre,+MG&'
     api_key = 'key=AIzaSyAokIWXfyu8eTgvJTEtrS_5e32FiMznq2s'
@@ -23,15 +26,6 @@ def show_map(request):
     lng = float(jdata['results'][0]['geometry']['location']['lng'])
     # import ipdb; ipdb.set_trace()
     locations = [
-        {'lat': -22.2526, 'lng': -45.7042},
         {'lat': lat, 'lng': lng},
     ]
-    return render(request, 'map.html', {'locations': locations})
-
-def index(request):
-    return render(request, 'main-page-dev.html')
-# class MapView(CreateView):
-#     model = ONG
-    # template_name = 'map.html'
-    # fields define que atributos serão mostrados na pagina
-    # fields = ['name', 'city', 'sort', 'lat', 'lng']
+    return render(request, 'main-page-dev.html', {'locations': locations})

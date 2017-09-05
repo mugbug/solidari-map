@@ -237,23 +237,22 @@
     </div>
 
 
-
-    <!-- Google Maps script -->
+    <!-- Google Maps customization script -->
     <script>
-        function initMap() {
-            var uluru = { lat: -22.2601556, lng: -45.7080104 };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
-            });
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
+    var locations = [
+      // query data from views.py
+      {% for location in locations %}
+        {lat: {{ location.lat|safe }}, lng: {{ location.lng|safe }} },
+      {% endfor %}
+    ]
     </script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/custom-map.js">
+    </script>
+    <!-- Google Maps script -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJx0p7px4voOc5rik6i5CdlIOjLX_rH7w&callback=initMap">
-
+    </script>
+    <!-- Marker Clusterer -->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
 
     <!-- Bootstrap scripts -->
