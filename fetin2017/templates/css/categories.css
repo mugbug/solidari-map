@@ -1,0 +1,18 @@
+.card-deck {
+    width: 1000px;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+}
+
+.card {
+    border-color: white;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: justify;
+    text-indent: 2em;
+}
