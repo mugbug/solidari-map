@@ -38,8 +38,11 @@
 <!-- BODY -->
 
 <body>
+    <button click="EPPZScrollTo.scrollVerticalToElementById('navbar', 0);"
+      id="top-button" title="Go to top">Top</button>
+
     <!-- Navbar header-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <img class="globe-logo" src="{{ STATIC_URL }}images/icons/globe.png">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
@@ -49,18 +52,21 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">ENCONTRE UMA ONG<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="">ENCONTRE UMA ONG<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATEGORIAS</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">CULTURA</a>
-                        <a class="dropdown-item" href="#">EDUCAÇÃO</a>
-                        <a class="dropdown-item" href="#">SAÚDE</a>
+                        <a class="dropdown-item" href="">CULTURA</a>
+                        <a class="dropdown-item" href="">EDUCAÇÃO</a>
+                        <a class="dropdown-item" href="">SAÚDE</a>
                     </div>
                 </li>
-                <li class="nav-item active" href="">
-                    <a class="nav-link" href="#">SOBRE NÓS</a>
+                <li class="nav-item active">
+                    <a class="nav-link"
+                      onclick="EPPZScrollTo.scrollVerticalToElementById('sobre-nos', 20);">
+                      SOBRE NÓS
+                    </a>
                 </li>
             </ul>
         </div>
@@ -85,7 +91,7 @@
     <hr class="div-hr">
 
     <!-- Project -->
-    <h1 class="heading-1">Conheça o</h1>
+    <h1 id="sobre-nos" class="heading-1">Conheça o</h1>
     <img class="title_logo_black" src="{{ STATIC_URL }}images/title_logo_black.png" alt="SolidariMap logo">
     <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida elementum facilisis. Fusce porta convallis volutpat.
         Vivamus bibendum purus eu sem hendrerit, posuere interdum metus placerat. Etiam at dignissim odio, ac gravida nisi.
@@ -236,6 +242,9 @@
         <span>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span>
     </div>
 
+    <!-- ScrollTo script -->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/scrollTo.js">
+    </script>
 
     <!-- Google Maps customization script -->
     <script>
@@ -262,6 +271,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
