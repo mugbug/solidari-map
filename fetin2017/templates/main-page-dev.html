@@ -1,9 +1,13 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+<!-- HEAD -->
 <head>
+    <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
     <!-- Bootstrap stylesheet-->
@@ -36,15 +40,14 @@
 </head>
 
 <!-- BODY -->
-
 <body>
-    <button click="EPPZScrollTo.scrollVerticalToElementById('navbar', 0);"
+    <button onclick="EPPZScrollTo.scrollVerticalToElementById('navbar', 0);"
       id="top-button" title="Go to top">Top</button>
 
     <!-- Navbar header-->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <img class="globe-logo" src="{{ STATIC_URL }}images/icons/globe.png">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
             aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,21 +55,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="">ENCONTRE UMA ONG<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATEGORIAS</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="">CULTURA</a>
-                        <a class="dropdown-item" href="">EDUCAÇÃO</a>
-                        <a class="dropdown-item" href="">SAÚDE</a>
-                    </div>
+                    <a class="nav-link" onclick="EPPZScrollTo.scrollVerticalToElementById('map-div', 0);">ENCONTRE UMA ONG</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link"
-                      onclick="EPPZScrollTo.scrollVerticalToElementById('sobre-nos', 20);">
-                      SOBRE NÓS
-                    </a>
+                    <a class="nav-link" onclick="EPPZScrollTo.scrollVerticalToElementById('categories-div', 0);">CATEGORIAS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="EPPZScrollTo.scrollVerticalToElementById('about-us-div', 0);">SOBRE NÓS</a>
                 </li>
             </ul>
         </div>
@@ -79,7 +74,7 @@
         <!-- Title image -->
         <img class="title_logo" src="{{ STATIC_URL }}images/title_logo.png" alt="SolidariMap logo">
         <!-- KOP button -->
-        <a href="#"><img class="know-our-project-btn" src="{{ STATIC_URL }}images/know-our-site-button.png" alt="Know our website button"></a>
+        <a><img class="know-our-project-btn" src="{{ STATIC_URL }}images/know-our-site-button.png" alt="Know our website button" onclick="EPPZScrollTo.scrollVerticalToElementById('know-our-project-div', 0);" ></a>
         <!-- Photo button -->
         <span><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@larm?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Larm Rmah"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span>
         <span style="display:inline-block;padding:2px 3px;">Photo by Larm Rmah</span>
@@ -88,10 +83,10 @@
     </div>
 
     <!-- Division line -->
-    <hr class="div-hr">
+    <hr id="know-our-project-div" class="div-hr">
 
     <!-- Project -->
-    <h1 id="sobre-nos" class="heading-1">Conheça o</h1>
+    <h1 class="heading-1">Conheça o</h1>
     <img class="title_logo_black" src="{{ STATIC_URL }}images/title_logo_black.png" alt="SolidariMap logo">
     <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida elementum facilisis. Fusce porta convallis volutpat.
         Vivamus bibendum purus eu sem hendrerit, posuere interdum metus placerat. Etiam at dignissim odio, ac gravida nisi.
@@ -106,11 +101,9 @@
         ut arcu efficitur rhoncus. Proin ac pharetra mauris. Proin finibus finibus lorem at imperdiet. Nullam quis metus
         efficitur, tincidunt erat nec, egestas diam. Donec volutpat lorem eu erat fringilla, sit amet tristique libero iaculis.
         Nam eu purus commodo sem luctus malesuada id sit amet nibh. </p>
-
-
-
+        
     <!-- Division line -->
-    <hr class="div-hr">
+    <hr id="categories-div" class="div-hr">
 
     <!-- Categories -->
     <h1 class="heading-1" style="padding: 16px; padding-bottom: 24px">Existem diversos tipos de ONGs em busca de voluntários</h1>
@@ -145,7 +138,7 @@
     </div>
 
     <!-- Division line -->
-    <hr class="div-hr">
+    <hr id="map-div" class="div-hr">
 
     <!-- Map -->
     <h1 class="heading-1" style="padding: 8px">Encontre uma ONG próxima a você!</h1>
@@ -194,7 +187,7 @@
     <div id="map"></div>
 
     <!-- Division line -->
-    <hr class="div-hr">
+    <hr id="about-us-div" class="div-hr">
 
     <!-- Categories-->
     <!-- Culture -->
