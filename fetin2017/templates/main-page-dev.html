@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <!-- HEAD -->
+
 <head>
     <!-- Metadata -->
     <meta charset="utf-8">
@@ -40,9 +41,16 @@
 </head>
 
 <!-- BODY -->
+
 <body>
+<<<<<<< HEAD
     <button onclick="EPPZScrollTo.scrollVerticalToElementById('navbar', 0);"
       id="top-button" title="Go to top"></button>
+=======
+    <button id="top-button" onclick="EPPZScrollTo.scrollVerticalToElementById('navbar', 0);" title="Ir para o topo">
+        Voltar ao topo
+    </button>
+>>>>>>> 9dd60da14735803fd125cead510e493ede9f4516
 
     <!-- Navbar header-->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,8 +58,8 @@
         <a class="navbar-brand"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
             aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -74,15 +82,27 @@
         <!-- Title image -->
         <img class="title_logo" src="{{ STATIC_URL }}images/title_logo.png" alt="SolidariMap logo">
         <!-- KOP button -->
-        <a><img class="know-our-project-btn" src="{{ STATIC_URL }}images/know-our-site-button.png" alt="Know our website button" onclick="EPPZScrollTo.scrollVerticalToElementById('know-our-project-div', 0);" ></a>
-        <!-- Photo button -->
-        <span><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@larm?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Larm Rmah"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span>
-        <span style="display:inline-block;padding:2px 3px;">Photo by Larm Rmah</span>
+        <a>
+            <img class="know-our-project-btn" src="{{ STATIC_URL }}images/know-our-site-button.png" alt="Know our website button" onclick="EPPZScrollTo.scrollVerticalToElementById('know-our-project-div', 0);">
         </a>
+        <!-- Photo button -->
+        <span>
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;"
+                href="https://unsplash.com/@larm?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+                target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Larm Rmah">
+                <span style="display:inline-block;padding:2px 3px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;"
+                        viewBox="0 0 32 32">
+                        <title></title>
+                        <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+                    </svg>
+                </span>
+                <span style="display:inline-block;padding:2px 3px;">Photo by Larm Rmah</span>
+            </a>
         </span>
     </div>
 
-    <!-- Division line -->
+    <!-- Division line -------------------------------------------------------------------------------------------------->
     <hr id="know-our-project-div" class="div-hr">
 
     <!-- Project -->
@@ -102,7 +122,11 @@
         efficitur, tincidunt erat nec, egestas diam. Donec volutpat lorem eu erat fringilla, sit amet tristique libero iaculis.
         Nam eu purus commodo sem luctus malesuada id sit amet nibh. </p>
 
+<<<<<<< HEAD
     <!-- Division line -->
+=======
+    <!-- Division line -------------------------------------------------------------------------------------------------->
+>>>>>>> 9dd60da14735803fd125cead510e493ede9f4516
     <hr id="categories-div" class="div-hr">
 
     <!-- Categories -->
@@ -114,8 +138,10 @@
                 <h4 class="card-title">Ambiental</h4>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has
                     even longer content than the first to show that equal height action.</p>
-                <p style="font-size: 14px">Foto por <a href="https://unsplash.com/@kimdanielarthur">Kim Daniel</a> no <a href="https://unsplash.com/">Unsplash</a>.
-                    </p>
+                <p style="font-size: 14px">Foto por
+                    <a href="https://unsplash.com/@kimdanielarthur">Kim Daniel</a> no
+                    <a href="https://unsplash.com/">Unsplash</a>.
+                </p>
             </div>
         </div>
         <div class="card">
@@ -124,20 +150,26 @@
                 <h4 class="card-title">Educação infantil</h4>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
                     is a little bit longer.</p>
-                <p style="font-size: 14px">Foto por <a href="https://unsplash.com/@douglinstedt">Doug Linstedt</a> no <a href="https://unsplash.com/">Unsplash</a>.</p>
+                <p style="font-size: 14px">Foto por
+                    <a href="https://unsplash.com/@douglinstedt">Doug Linstedt</a> no
+                    <a href="https://unsplash.com/">Unsplash</a>.</p>
             </div>
         </div>
         <div class="card">
             <img class="card-img-top rounded-circle" src="{{ STATIC_URL }}images/categories/category-animal.jpg" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title">Proteção animal</h4>
-                <p class="card-text">Segundo a <a href="http://abinpet.org.br/site/">Abinpet</a>, o Brasil, hoje, possui a segunda maior população de cães e gatos no mundo. Entretanto, muitos desses animais se encontram abandonados nas ruas e/ou sofrem maus tratos e precisam de proteção.</p>
-                <p style="font-size: 14px">Foto por <a href="https://unsplash.com/@nuithatako">Chaiyaporn Atakampeewong</a> no <a href="https://unsplash.com/">Unsplash</a>.</p>
+                <p class="card-text">Segundo a
+                    <a href="http://abinpet.org.br/site/">Abinpet</a>, o Brasil, hoje, possui a segunda maior população de cães e gatos no mundo. Entretanto, muitos
+                    desses animais se encontram abandonados nas ruas e/ou sofrem maus tratos e precisam de proteção.</p>
+                <p style="font-size: 14px">Foto por
+                    <a href="https://unsplash.com/@nuithatako">Chaiyaporn Atakampeewong</a> no
+                    <a href="https://unsplash.com/">Unsplash</a>.</p>
             </div>
         </div>
     </div>
 
-    <!-- Division line -->
+    <!-- Division line -------------------------------------------------------------------------------------------------->
     <hr id="map-div" class="div-hr">
 
     <!-- Map -->
@@ -146,7 +178,9 @@
     <form onsubmit="return false">
         <div class="search-input form-row">
             <div class="search-input-label col-md-4">
-                <label for="sel1"><span>Selecione seu estado:</span></label>
+                <label for="sel1">
+                    <span>Selecione seu estado:</span>
+                </label>
             </div>
             <div class="states-dropdown col-xs-4">
                 <select class="form-control" id="sel1" onchange="updateAddress()">
@@ -188,43 +222,71 @@
 
     <div id="map"></div>
 
-    <!-- Division line -->
+    <!-- Division line -------------------------------------------------------------------------------------------------->
     <hr id="about-us-div" class="div-hr">
-
-    <!-- Categories-->
-    <!-- Culture -->
-
-
-    <!-- Health -->
-
-
-    <!-- Education -->
-
-
-    <!-- Division line -->
 
     <!-- About us -->
     <h1 class="heading-1">Sobre nós</h1>
     <div class="card-group">
         <div class="card">
-            <img class="card-img-top rounded" src="{{ STATIC_URL }}images/about/leonardo.jpg" alt="Card image cap">
+            <img class="card-img-top rounded" src="{{ STATIC_URL }}images/about/leonardo.jpg" alt="Foto do Leonardo">
             <div class="card-body">
-                <h4 class="card-title">Leonardo de Oliveira Saldanha</h4>
-                <p class="card-text">Front-end developer</p>
+                <h3 class="card-title">Leonardo de Oliveira Saldanha</h3>
+                <h2 class="info">leoosaldanha@gmail.com</h2>
+                <h2 class="info">(35) 99966 2609</h2>
+            </div>
+            
+            <div class="social-media-row row">
+                <div class="col-xs-6">
+                    <a href="https://www.facebook.com/leoosaldanha" target="_blank">
+                        <img class="social-icon rounded" src="{{ STATIC_URL }}images/icons/facebook.png">
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="https://www.linkedin.com/in/leonardo-de-oliveira-saldanha-b42004a8/" target="_blank">
+                        <img class="social-icon rounded" src="{{ STATIC_URL }}images/icons/linkedin.png">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="card">
-            <img class="card-img-top rounded" src="{{ STATIC_URL }}images/about/pedro.jpg" alt="Card image cap">
+            <img class="card-img-top rounded" src="{{ STATIC_URL }}images/about/pedro.jpg" alt="Foto do Pedro">
             <div class="card-body">
-                <h4 class="card-title">Pedro Marinho Zaroni</h4>
-                <p class="card-text"><br>Back-end developer</p>
+                <h3 class="card-title">Pedro Marinho Zaroni</h3>
+                <h2 class="info">zaronipedro@outlook.com</h2>
+                <h2 class="info">(35) 99966 2609</h2>
+            </div>
+            <div class="social-media-row row">
+                <div class="col-xs-6">
+                    <a href="https://www.facebook.com/pedrozaroni" target="_blank">
+                        <img class="social-icon rounded" src="{{ STATIC_URL }}images/icons/facebook.png">
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="https://www.linkedin.com/in/pedrozaroni/" target="_blank">
+                        <img class="social-icon rounded" src="{{ STATIC_URL }}images/icons/linkedin.png">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="card">
-            <img class="card-img-top rounded" src="{{ STATIC_URL }}images/about/thiago.jpg" alt="Thiago's photo">
+            <img class="card-img-top rounded" src="{{ STATIC_URL }}images/about/thiago.jpg" alt="Foto do Thiago">
             <div class="card-body">
-                <h4 class="card-title">Thiago Mansur Gonçalves</h4>
-                <p class="card-text">Back-end developer</p>
+                <h3 class="card-title">Thiago Mansur Gonçalves</h3>
+                <h2 class="info">thiagomansur@gec.inatel.br</h2>
+                <h2 class="info">(24) 98832-7946</h2>
+            </div>
+            <div class="social-media-row row">
+                <div class="col-xs-6">
+                    <a href="https://www.facebook.com/tmg100" target="_blank">
+                        <img class="social-icon rounded" src="{{ STATIC_URL }}images/icons/facebook.png">
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="https://www.linkedin.com/in/thiago-mansur-gon%C3%A7alves-734b2028/" target="_blank">
+                        <img class="social-icon rounded" src="{{ STATIC_URL }}images/icons/linkedin.png">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -234,8 +296,14 @@
 
     <!-- Footer -->
     <div class="footer">
-        <span>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span>
+        <span>Icons made by
+            <a href="http://www.freepik.com" title="Freepik">Freepik</a> and
+            <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </span>
     </div>
+
 
     <!-- ScrollTo script -->
     <script type="text/javascript" src="{{ STATIC_URL }}js/scrollTo.js">
@@ -243,11 +311,11 @@
 
     <!-- Google Maps customization script -->
     <script>
-    var locations = [
-      // query data from views.py
-      {% for location in locations %}
-        {lat: {{ location.lat|safe }}, lng: {{ location.lng|safe }} },
-      {% endfor %}
+        var locations = [
+            // query data from views.py
+            {% for location in locations %}
+        { lat: { { location.lat | safe } }, lng: { { location.lng | safe } } },
+        {% endfor %}
     ]
     </script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/custom-map.js">
