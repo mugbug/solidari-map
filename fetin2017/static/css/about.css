@@ -9,3 +9,19 @@
     width: 300px;
     height: 300px;
 }
+
+.info {
+    font-size: 16px;
+    text-align: center;
+}
+
+.social-icon {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    margin-left: 5px;
+}
+
+.social-media-row {
+    margin: 0 auto;
+}
