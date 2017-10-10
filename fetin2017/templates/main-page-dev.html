@@ -42,7 +42,7 @@
 <!-- BODY -->
 <body>
     <button onclick="EPPZScrollTo.scrollVerticalToElementById('navbar', 0);"
-      id="top-button" title="Go to top">Top</button>
+      id="top-button" title="Go to top"></button>
 
     <!-- Navbar header-->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -101,7 +101,7 @@
         ut arcu efficitur rhoncus. Proin ac pharetra mauris. Proin finibus finibus lorem at imperdiet. Nullam quis metus
         efficitur, tincidunt erat nec, egestas diam. Donec volutpat lorem eu erat fringilla, sit amet tristique libero iaculis.
         Nam eu purus commodo sem luctus malesuada id sit amet nibh. </p>
-        
+
     <!-- Division line -->
     <hr id="categories-div" class="div-hr">
 
@@ -143,43 +143,45 @@
     <!-- Map -->
     <h1 class="heading-1" style="padding: 8px">Encontre uma ONG próxima a você!</h1>
 
-    <form>
+    <form onsubmit="return false">
         <div class="search-input form-row">
             <div class="search-input-label col-md-4">
                 <label for="sel1"><span>Selecione seu estado:</span></label>
             </div>
             <div class="states-dropdown col-xs-4">
-                <select class="form-control" id="sel1">
-                    <option>Acre</option>
-                    <option>Alagoas</option>
-                    <option>Amapá</option>
-                    <option>Amazonas</option>
-                    <option>Bahia</option>
-                    <option>Ceará</option>
-                    <option>Distrito Federal</option>
-                    <option>Espírito Santo</option>
-                    <option>Goiás</option>
-                    <option>Maranhão</option>
-                    <option>Mato Grosso</option>
-                    <option>Mato Grosso do Sul</option>
-                    <option>Minas Gerais</option>
-                    <option>Pará</option>
-                    <option>Paraíba</option>
-                    <option>Paraná</option>
-                    <option>Pernambuco</option>
-                    <option>Piauí</option>
-                    <option>Rio de Janeiro</option>
-                    <option>Rio Grande do Norte</option>
-                    <option>Rio Grande do Sul</option>
-                    <option>Rondônia</option>
-                    <option>Santa Catarina</option>
-                    <option>São Paulo</option>
-                    <option>Sergipe</option>
-                    <option>Tocantins</option>
+                <select class="form-control" id="sel1" onchange="updateAddress()">
+                    <option value='AC'>Acre</option>
+                    <option value='AL'>Alagoas</option>
+                    <option value='AP'>Amapá</option>
+                    <option value='AM'>Amazonas</option>
+                    <option value='BA'>Bahia</option>
+                    <option value='CE'>Ceará</option>
+                    <option value='DF'>Distrito Federal</option>
+                    <option value='ES'>Espírito Santo</option>
+                    <option value='GO'>Goiás</option>
+                    <option value='MA'>Maranhão</option>
+                    <option value='MT'>Mato Grosso</option>
+                    <option value='MS'>Mato Grosso do Sul</option>
+                    <option value='MG'>Minas Gerais</option>
+                    <option value='PA'>Pará</option>
+                    <option value='PB'>Paraíba</option>
+                    <option value='PR'>Paraná</option>
+                    <option value='PE'>Pernambuco</option>
+                    <option value='PI'>Piauí</option>
+                    <option value='RJ'>Rio de Janeiro</option>
+                    <option value='RN'>Rio Grande do Norte</option>
+                    <option value='DF'>Rio Grande do Sul</option>
+                    <option value='RO'>Rondônia</option>
+                    <option value='RR'>Roraima</option>
+                    <option value='SC'>Santa Catarina</option>
+                    <option value='SP'>São Paulo</option>
+                    <option value='SE'>Sergipe</option>
+                    <option value='TO'>Tocantins</option>
                 </select>
             </div>
             <div class="search-input-field col-md-4">
-                <input type="text" class="form-control" placeholder="Cidade" aria-label="Username" aria-describedby="basic-addon1">
+                <input id="city" type="text" class="form-control" placeholder="Cidade"
+                aria-describedby="basic-addon1" onkeydown="updateAddress()">
             </div>
         </div>
     </form>

@@ -7,10 +7,23 @@
 //   {% endfor %}
 // ]
 
+var address;
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -22.2526, lng: -45.7042},
-    zoom: 8
+  var map;
+  var mapDiv = document.getElementById('map');
+  if(address == null){
+    address = 'Pouso Alegre, MG, Brasil';
+  }
+  var geocoder = new google.maps.Geocoder();
+  // Get lat/lng by address
+  geocoder.geocode({
+    "address": address
+  }, function(results, status){
+      map = new google.maps.Map(mapDiv, {
+        // Center map (but check status of geocoder)
+        center: results[0].geometry.location,
+        zoom: 13,
+      })
   });
 
   // Create an array of alphabetical characters used to label the markers.
@@ -30,4 +43,11 @@ function initMap() {
   // Add a marker clusterer to manage the markers.
   var markerCluster = new MarkerClusterer(map, markers,
      {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+}
+
+function updateAddress() {
+  var city = document.getElementById('city').value;
+  var state = document.getElementById('sel1').value;
+  address = city + ', ' + state + ', Brasil';
+  initMap()
 }
