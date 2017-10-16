@@ -127,8 +127,10 @@
             <img class="card-img-top rounded-circle" src="{{ STATIC_URL }}images/categories/category-environmental.jpg" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title">Ambiental</h4>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has
-                    even longer content than the first to show that equal height action.</p>
+                <p class="card-text">ONGs ambientais lutam em defesa do meio ambiente e promovem pesquisas e campanhas. Desenvolvem formas de
+                    educar e preservar o meio ambiente, e também fiscalizam os órgãos competentes.</p>
+                <br>
+                <br>
                 <p style="font-size: 14px">Foto por
                     <a href="https://unsplash.com/@kimdanielarthur">Kim Daniel</a> no
                     <a href="https://unsplash.com/">Unsplash</a>.
@@ -139,8 +141,9 @@
             <img class="card-img-top rounded-circle" src="{{ STATIC_URL }}images/categories/category-education.jpg" alt="Kids studying">
             <div class="card-body">
                 <h4 class="card-title">Educação infantil</h4>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
-                    is a little bit longer.</p>
+                <p class="card-text">ONGs na área da educação infantil buscam meios e recursos para levar educação de qualidade às crianças que
+                    não tem acesso, pois ela ajuda a combater a pobreza e provê às pessoas, o conhecimento, as habilidades
+                    e a confiança que precisam para construírem um futuro melhor.</p>
                 <p style="font-size: 14px">Foto por
                     <a href="https://unsplash.com/@douglinstedt">Doug Linstedt</a> no
                     <a href="https://unsplash.com/">Unsplash</a>.</p>
@@ -153,8 +156,11 @@
                 <p class="card-text">Segundo a
                     <a href="http://abinpet.org.br/site/">Abinpet</a>, o Brasil, hoje, possui a segunda maior população de cães e gatos no mundo. Entretanto, muitos
                     desses animais se encontram abandonados nas ruas e/ou sofrem maus tratos e precisam de proteção.</p>
+                <br>
+                <br>
+                <br>
                 <p style="font-size: 14px">Foto por
-                    <a href="https://unsplash.com/@nuithatako">Chaiyaporn Atakampeewong</a> no
+                    <a href="https://unsplash.com/@nuithatako">C. Atakampeewong</a> no
                     <a href="https://unsplash.com/">Unsplash</a>.</p>
             </div>
         </div>
@@ -168,13 +174,13 @@
 
     <form onsubmit="return false">
         <div class="search-input form-row">
-            <div class="search-input-label col-md-4">
-                <label for="sel1">
+            <div class="search-input-label col-md-3">
+                <label for="state">
                     <span>Selecione seu estado:</span>
                 </label>
             </div>
-            <div class="states-dropdown col-xs-4">
-                <select class="form-control" id="sel1" onchange="updateAddress()">
+            <div class="states-dropdown col-xs-3">
+                <select class="form-control" id="state" onchange="addressToCoordinates()">
                     <option value='AC'>Acre</option>
                     <option value='AL'>Alagoas</option>
                     <option value='AP'>Amapá</option>
@@ -204,9 +210,11 @@
                     <option value='TO'>Tocantins</option>
                 </select>
             </div>
-            <div class="search-input-field col-md-4">
-                <input id="city" type="text" class="form-control" placeholder="Cidade"
-                aria-describedby="basic-addon1" onkeydown="updateAddress()">
+            <div class="search-input-field col-md-3">
+                <input id="city" type="text" class="form-control" placeholder="Cidade" aria-describedby="basic-addon1" onkeydown="addressToCoordinates()">
+            </div>
+            <div class="search-input-field col-md-3">
+                <input id="neighborhood" type="text" class="form-control" placeholder="Bairro" aria-describedby="basic-addon1" onkeydown="addressToCoordinates()">
             </div>
         </div>
     </form>
