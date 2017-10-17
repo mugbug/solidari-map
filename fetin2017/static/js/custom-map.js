@@ -45,17 +45,17 @@ function geocodeAddress(geocoder, resultsMap, address, name, infowindow, info) {
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
       // demo icon
-      var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+      var iconBase = 'https://raw.githubusercontent.com/mugbug/fetin-2017/develop/fetin2017/static/images/icons/';
       var icons = {
-        parking: {
-          icon: iconBase + 'parking_lot_maps.png'
+        ong: {
+          icon: iconBase + 'ong-test.png'
         },
       };
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location,
         title: name,
-        icon: icons['library'].icon,
+        icon: icons['ong'].icon,
       });
       
       marker.addListener('click', function () {

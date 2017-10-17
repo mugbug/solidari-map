@@ -125,4 +125,7 @@ ENV/
 # mkdocs documentation
 /site
 
+# Visual Studio Code
+.vscode
+
 # End of https://www.gitignore.io/api/linux,django,python
