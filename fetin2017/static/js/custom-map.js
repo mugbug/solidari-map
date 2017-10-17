@@ -12,31 +12,52 @@ function initMap() {
     zoom: 14,
     center: { lat: -22.2527245, lng: -45.7016189 }
   });
-  //Set markers
-  var object = readJSON();
-  console.log(object)
-  for (var i in object) {
-    var marker = new google.maps.Marker({
-      position: convertAddressToCoordinates(object[i].address),
-      map: map,
-      title: object[i].name
-    });
-  }
-}
 
-function readJSON() {
+  // get json data and set markers
   var JSONobject
-  // var JSONobject;
+  var object
   var request = new XMLHttpRequest();
   request.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) { 
       JSONobject = JSON.parse(this.responseText);
+      object = JSONobject.data;
+
+      //Set markers
+      for (var i in object) {
+        info = '<div id="content">'+
+        '<h5 id="firstHeading" class="firstHeading">'+object[i].name+'</h5>'+
+        '<div id="bodyContent">'+
+        '<p><b>Endereço:</b> '+object[i].address+'</p>'+
+        '<p><b>Telefone:</b> '+object[i].phone+'</p></div></div>';
+
+        geocodeAddress(geocoder, map, object[i].address, object[i].name, info);
+      }
     }
   };
   request.open("GET", "https://raw.githubusercontent.com/mugbug/fetin-2017/master/fetin2017/static/js/data.json", true);
   request.send();
+}
 
-  return JSONobject;
+// Set markers
+function geocodeAddress(geocoder, resultsMap, address, name, info) {
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === 'OK') {
+      // resultsMap.setCenter(results[0].geometry.location);
+      var infowindow = new google.maps.InfoWindow({
+        content: info
+      });
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location,
+        title: name
+      });
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
 }
 
 function convertAddressToCoordinates(address) {
