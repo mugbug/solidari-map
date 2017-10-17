@@ -38,10 +38,11 @@ admin.py	../maps/admin.py	1;"	kind:file	line:1
 application	../fetin2017/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 apps.py	../maps/apps.py	1;"	kind:file	line:1
 city	../maps/models.py	/^    city = models.CharField(max_length=2, choices=CITY_OPTIONS, default="B")$/;"	kind:variable	line:20
+data	../maps/views.py	/^def data(request):$/;"	kind:function	line:19
 dependencies	../maps/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:12
 dependencies	../maps/migrations/0002_auto_20170901_1738.py	/^    dependencies = [$/;"	kind:variable	line:10
 fields	../maps/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:18
-index	../maps/views.py	/^def index(request):$/;"	kind:function	line:14
+index	../maps/views.py	/^def index(request):$/;"	kind:function	line:16
 initial	../maps/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:10
 lat	../maps/models.py	/^    lat = models.FloatField(verbose_name = 'Latitude', max_length=3)$/;"	kind:variable	line:22
 lng	../maps/models.py	/^    lng = models.FloatField(verbose_name = 'Longitude', max_length=3)$/;"	kind:variable	line:23
