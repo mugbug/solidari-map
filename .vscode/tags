@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0001_initial.py	../maps/migrations/0001_initial.py	1;"	kind:file	line:1
+0002_auto_20170901_1738.py	../maps/migrations/0002_auto_20170901_1738.py	1;"	kind:file	line:1
+ALLOWED_HOSTS	../fetin2017/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:29
+AUTH_PASSWORD_VALIDATORS	../fetin2017/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:90
+BASE_DIR	../fetin2017/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:17
+CITY_OPTIONS	../maps/models.py	/^    CITY_OPTIONS = ($/;"	kind:variable	line:12
+DATABASES	../fetin2017/settings.py	/^DATABASES = {$/;"	kind:variable	line:79
+DATA_DIR	../fetin2017/settings.py	/^DATA_DIR = os.path.dirname(os.path.dirname(__file__))$/;"	kind:variable	line:15
+DEBUG	../fetin2017/settings.py	/^DEBUG = True$/;"	kind:variable	line:27
+INSTALLED_APPS	../fetin2017/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:34
+LANGUAGE_CODE	../fetin2017/settings.py	/^LANGUAGE_CODE = 'pt-br'$/;"	kind:variable	line:109
+MIDDLEWARE	../fetin2017/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:44
+MapsConfig	../maps/apps.py	/^class MapsConfig(AppConfig):$/;"	kind:class	line:4
+Migration	../maps/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+Migration	../maps/migrations/0002_auto_20170901_1738.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+ONG	../maps/models.py	/^class ONG(models.Model):$/;"	kind:class	line:5
+ROOT_URLCONF	../fetin2017/settings.py	/^ROOT_URLCONF = 'fetin2017.urls'$/;"	kind:variable	line:54
+SORT_OPTIONS	../maps/models.py	/^    SORT_OPTIONS = ($/;"	kind:variable	line:16
+STATICFILES_DIRS	../fetin2017/settings.py	/^STATICFILES_DIRS = [$/;"	kind:variable	line:128
+STATIC_ROOT	../fetin2017/settings.py	/^STATIC_ROOT = os.path.join(DATA_DIR, 'static')$/;"	kind:variable	line:126
+STATIC_URL	../fetin2017/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:123
+TEMPLATES	../fetin2017/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:56
+TIME_ZONE	../fetin2017/settings.py	/^TIME_ZONE = 'America\/Sao_Paulo'$/;"	kind:variable	line:111
+USE_I18N	../fetin2017/settings.py	/^USE_I18N = True$/;"	kind:variable	line:113
+USE_L10N	../fetin2017/settings.py	/^USE_L10N = True$/;"	kind:variable	line:115
+USE_TZ	../fetin2017/settings.py	/^USE_TZ = True$/;"	kind:variable	line:117
+WSGI_APPLICATION	../fetin2017/settings.py	/^WSGI_APPLICATION = 'fetin2017.wsgi.application'$/;"	kind:variable	line:73
+__init__.py	../fetin2017/__init__.py	1;"	kind:file	line:1
+__init__.py	../maps/__init__.py	1;"	kind:file	line:1
+__init__.py	../maps/migrations/__init__.py	1;"	kind:file	line:1
+admin.py	../maps/admin.py	1;"	kind:file	line:1
+application	../fetin2017/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	../maps/apps.py	1;"	kind:file	line:1
+city	../maps/models.py	/^    city = models.CharField(max_length=2, choices=CITY_OPTIONS, default="B")$/;"	kind:variable	line:20
+dependencies	../maps/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:12
+dependencies	../maps/migrations/0002_auto_20170901_1738.py	/^    dependencies = [$/;"	kind:variable	line:10
+fields	../maps/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:18
+index	../maps/views.py	/^def index(request):$/;"	kind:function	line:14
+initial	../maps/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:10
+lat	../maps/models.py	/^    lat = models.FloatField(verbose_name = 'Latitude', max_length=3)$/;"	kind:variable	line:22
+lng	../maps/models.py	/^    lng = models.FloatField(verbose_name = 'Longitude', max_length=3)$/;"	kind:variable	line:23
+location	../maps/models.py	/^    location = [lat, lng]$/;"	kind:variable	line:24
+manage.py	../manage.py	1;"	kind:file	line:1
+models.py	../maps/models.py	1;"	kind:file	line:1
+name	../maps/apps.py	/^    name = 'maps'$/;"	kind:variable	line:5
+name	../maps/migrations/0001_initial.py	/^            name='ONG',$/;"	kind:variable	line:17
+name	../maps/models.py	/^    name = models.CharField(max_length=128)$/;"	kind:variable	line:7
+operations	../maps/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:15
+operations	../maps/migrations/0002_auto_20170901_1738.py	/^    operations = [$/;"	kind:variable	line:14
+settings.py	../fetin2017/settings.py	1;"	kind:file	line:1
+sort	../maps/models.py	/^    sort = models.CharField(max_length=2, choices=SORT_OPTIONS, default="B")$/;"	kind:variable	line:21
+tests.py	../maps/tests.py	1;"	kind:file	line:1
+urlpatterns	../fetin2017/urls.py	/^urlpatterns = [$/;"	kind:variable	line:19
+urlpatterns	../maps/urls.py	/^urlpatterns = [$/;"	kind:variable	line:5
+urls.py	../fetin2017/urls.py	1;"	kind:file	line:1
+urls.py	../maps/urls.py	1;"	kind:file	line:1
+views.py	../maps/views.py	1;"	kind:file	line:1
+wsgi.py	../fetin2017/wsgi.py	1;"	kind:file	line:1
