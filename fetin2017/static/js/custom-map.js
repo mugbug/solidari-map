@@ -6,6 +6,12 @@ var timeoutId = 0;
 
 //Initialize Google Maps API's map
 function initMap() {
+  // get json data and set markers
+  var JSONobject
+  var object
+  var request = new XMLHttpRequest();
+  var infowindow = new google.maps.InfoWindow();
+  
   //Initialize map
   geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
@@ -13,24 +19,20 @@ function initMap() {
     center: { lat: -22.2527245, lng: -45.7016189 }
   });
 
-  // get json data and set markers
-  var JSONobject
-  var object
-  var request = new XMLHttpRequest();
   request.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) { 
+    if (this.readyState == 4 && this.status == 200) {
       JSONobject = JSON.parse(this.responseText);
       object = JSONobject.data;
 
       //Set markers
       for (var i in object) {
-        info = '<div id="content">'+
-        '<h5 id="firstHeading" class="firstHeading">'+object[i].name+'</h5>'+
-        '<div id="bodyContent">'+
-        '<p><b>Endereço:</b> '+object[i].address+'</p>'+
-        '<p><b>Telefone:</b> '+object[i].phone+'</p></div></div>';
+        info = '<div id="content">' +
+          '<h5 id="firstHeading" class="firstHeading">' + object[i].name + '</h5>' +
+          '<div id="bodyContent">' +
+          '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
+          '<p><b>Telefone:</b> ' + object[i].phone + '</p></div></div>';
 
-        geocodeAddress(geocoder, map, object[i].address, object[i].name, info);
+        geocodeAddress(geocoder, map, object[i].address, object[i].name, infowindow, info);
       }
     }
   };
@@ -39,20 +41,19 @@ function initMap() {
 }
 
 // Set markers
-function geocodeAddress(geocoder, resultsMap, address, name, info) {
-  geocoder.geocode({'address': address}, function(results, status) {
+function geocodeAddress(geocoder, resultsMap, address, name, infowindow, info) {
+  geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
       // resultsMap.setCenter(results[0].geometry.location);
-      var infowindow = new google.maps.InfoWindow({
-        content: info
-      });
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location,
         title: name
       });
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
+      
+      marker.addListener('click', function () {
+        infowindow.setContent(info);
+        infowindow.open(map, this);
       });
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
