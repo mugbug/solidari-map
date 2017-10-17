@@ -44,11 +44,18 @@ function initMap() {
 function geocodeAddress(geocoder, resultsMap, address, name, infowindow, info) {
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
-      // resultsMap.setCenter(results[0].geometry.location);
+      // demo icon
+      var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+      var icons = {
+        parking: {
+          icon: iconBase + 'parking_lot_maps.png'
+        },
+      };
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location,
-        title: name
+        title: name,
+        icon: icons['library'].icon,
       });
       
       marker.addListener('click', function () {
