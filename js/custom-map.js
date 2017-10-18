@@ -26,11 +26,10 @@ function initMap() {
 
       //Set markers
       for (var i in object) {
-        info = '<div id="content">' +
-          '<h5 id="firstHeading" class="firstHeading">' + object[i].name + '</h5>' +
-          '<div id="bodyContent">' +
+        info = 
+          '<h5>' + object[i].name + '</h5>' +
           '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
-          '<p><b>Telefone:</b> ' + object[i].phone + '</p></div></div>';
+          '<p><b>Telefone:</b> ' + object[i].phone + '</p>';
 
         geocodeAddress(geocoder, map, object[i].address, object[i].name, infowindow, info);
       }
