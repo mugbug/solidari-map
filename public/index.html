@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- HEAD -->
+
+<head>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+    <!-- Bootstrap stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/custom-navbar.css">
+    <link rel="stylesheet" href="css/pres-banner.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/general-text.css">
+    <link rel="stylesheet" href="css/project-section.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Elements -->
+    <title>SolidariMap | Encontre uma ONG próxima a você</title>
+</head>
+
+<!-- BODY -->
+<body>
+    <button id="top-button" onclick="EPPZScrollTo.scrollVerticalToElementById('navbar', 0);" title="Ir para o topo">
+        Voltar ao topo
+    </button>
+
+    <!-- Navbar header-->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="globe-logo" src="images/icons/globe.png">
+        <a class="navbar-brand"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="EPPZScrollTo.scrollVerticalToElementById('map-div', 0);">ENCONTRE UMA ONG</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="EPPZScrollTo.scrollVerticalToElementById('categories-div', 0);">CATEGORIAS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="EPPZScrollTo.scrollVerticalToElementById('about-us-div', 0);">SOBRE NÓS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Presentation banner -->
+    <div class="pres-image">
+        <!-- Background image -->
+        <img class="img-bg-start" src="images/img-bg-start.jpg" alt="Kids smilling together">
+        <!-- Title image -->
+        <img class="title_logo" src="images/title_logo.png" alt="SolidariMap logo">
+        <!-- KOP button -->
+        <a>
+            <img class="know-our-project-btn" src="images/know-our-site-button.png" alt="Know our website button" onclick="EPPZScrollTo.scrollVerticalToElementById('know-our-project-div', 0);">
+        </a>
+        <!-- Photo button -->
+        <span>
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;"
+                href="https://unsplash.com/@larm?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+                target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Larm Rmah">
+                <span style="display:inline-block;padding:2px 3px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;"
+                        viewBox="0 0 32 32">
+                        <title></title>
+                        <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+                    </svg>
+                </span>
+                <span style="display:inline-block;padding:2px 3px;">Photo by Larm Rmah</span>
+            </a>
+        </span>
+    </div>
+
+    <!-- Division line -------------------------------------------------------------------------------------------------->
+    <hr id="know-our-project-div" class="div-hr">
+
+    <!-- Project -->
+    <h1 class="heading-1">Conheça o</h1>
+    <img class="title_logo_black" src="images/title_logo_black.png" alt="SolidariMap logo">
+    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida elementum facilisis. Fusce porta convallis volutpat.
+        Vivamus bibendum purus eu sem hendrerit, posuere interdum metus placerat. Etiam at dignissim odio, ac gravida nisi.
+        Vestibulum blandit sollicitudin tortor sit amet ultricies. Maecenas in imperdiet sapien, sit amet tincidunt neque.
+        Aliquam sollicitudin nibh sit amet est auctor, sit amet elementum lacus consequat. Ut sollicitudin dolor in feugiat
+        posuere. Donec eleifend tellus convallis erat pellentesque gravida quis efficitur mi. Nunc luctus diam nec ligula
+        lobortis vulputate. Nullam tristique consectetur sollicitudin. Praesent in commodo enim. Nulla metus turpis, placerat
+        eu nisi at, iaculis bibendum turpis. Nunc a commodo purus.</p>
+    <p class="paragraph">Curabitur tempus tortor a nunc lacinia hendrerit non ac nisi. Aenean ut accumsan enim. Nulla pulvinar urna convallis
+        luctus facilisis. Proin dignissim, ante quis dapibus commodo, urna sem maximus orci, in vestibulum velit dolor ut
+        nisi. Nulla eget turpis porttitor, imperdiet purus et, egestas purus. Pellentesque in porttitor dolor. Nam ac nibh
+        ut arcu efficitur rhoncus. Proin ac pharetra mauris. Proin finibus finibus lorem at imperdiet. Nullam quis metus
+        efficitur, tincidunt erat nec, egestas diam. Donec volutpat lorem eu erat fringilla, sit amet tristique libero iaculis.
+        Nam eu purus commodo sem luctus malesuada id sit amet nibh. </p>
+
+    <!-- Division line -------------------------------------------------------------------------------------------------->
+    <hr id="categories-div" class="div-hr">
+
+    <!-- Categories -->
+    <h1 class="heading-1" style="padding: 16px; padding-bottom: 24px">Existem diversos tipos de ONGs em busca de voluntários</h1>
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top rounded-circle" src="images/categories/category-environmental.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Ambiental</h4>
+                <p class="card-text">ONGs ambientais lutam em defesa do meio ambiente e promovem pesquisas e campanhas. Desenvolvem formas de
+                    educar e preservar o meio ambiente, e também fiscalizam os órgãos competentes.</p>
+                <br>
+                <br>
+                <p style="font-size: 14px">Foto por
+                    <a href="https://unsplash.com/@kimdanielarthur">Kim Daniel</a> no
+                    <a href="https://unsplash.com/">Unsplash</a>.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top rounded-circle" src="images/categories/category-education.jpg" alt="Kids studying">
+            <div class="card-body">
+                <h4 class="card-title">Educação infantil</h4>
+                <p class="card-text">ONGs na área da educação infantil buscam meios e recursos para levar educação de qualidade às crianças que
+                    não tem acesso, pois ela ajuda a combater a pobreza e provê às pessoas, o conhecimento, as habilidades
+                    e a confiança que precisam para construírem um futuro melhor.</p>
+                <p style="font-size: 14px">Foto por
+                    <a href="https://unsplash.com/@douglinstedt">Doug Linstedt</a> no
+                    <a href="https://unsplash.com/">Unsplash</a>.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top rounded-circle" src="images/categories/category-animal.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Proteção animal</h4>
+                <p class="card-text">Segundo a
+                    <a href="http://abinpet.org.br/site/">Abinpet</a>, o Brasil, hoje, possui a segunda maior população de cães e gatos no mundo. Entretanto, muitos
+                    desses animais se encontram abandonados nas ruas e/ou sofrem maus tratos e precisam de proteção.</p>
+                <br>
+                <br>
+                <br>
+                <p style="font-size: 14px">Foto por
+                    <a href="https://unsplash.com/@nuithatako">C. Atakampeewong</a> no
+                    <a href="https://unsplash.com/">Unsplash</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Division line -------------------------------------------------------------------------------------------------->
+    <hr id="map-div" class="div-hr">
+
+    <!-- Map -->
+    <h1 class="heading-1" style="padding: 8px">Encontre uma ONG próxima a você!</h1>
+
+    <form onsubmit="return false">
+        <div class="search-input form-row">
+            <div class="search-input-label col-md-3">
+                <label for="state">
+                    <span>Selecione seu estado:</span>
+                </label>
+            </div>
+            <div class="states-dropdown col-xs-3">
+                <select class="form-control" id="state" onchange="addressToCoordinates()">
+                    <option value='AC'>Acre</option>
+                    <option value='AL'>Alagoas</option>
+                    <option value='AP'>Amapá</option>
+                    <option value='AM'>Amazonas</option>
+                    <option value='BA'>Bahia</option>
+                    <option value='CE'>Ceará</option>
+                    <option value='DF'>Distrito Federal</option>
+                    <option value='ES'>Espírito Santo</option>
+                    <option value='GO'>Goiás</option>
+                    <option value='MA'>Maranhão</option>
+                    <option value='MT'>Mato Grosso</option>
+                    <option value='MS'>Mato Grosso do Sul</option>
+                    <option value='MG'>Minas Gerais</option>
+                    <option value='PA'>Pará</option>
+                    <option value='PB'>Paraíba</option>
+                    <option value='PR'>Paraná</option>
+                    <option value='PE'>Pernambuco</option>
+                    <option value='PI'>Piauí</option>
+                    <option value='RJ'>Rio de Janeiro</option>
+                    <option value='RN'>Rio Grande do Norte</option>
+                    <option value='DF'>Rio Grande do Sul</option>
+                    <option value='RO'>Rondônia</option>
+                    <option value='RR'>Roraima</option>
+                    <option value='SC'>Santa Catarina</option>
+                    <option value='SP'>São Paulo</option>
+                    <option value='SE'>Sergipe</option>
+                    <option value='TO'>Tocantins</option>
+                </select>
+            </div>
+            <div class="search-input-field col-md-3">
+                <input id="city" type="text" class="form-control" placeholder="Cidade" aria-describedby="basic-addon1" onkeydown="addressToCoordinates()">
+            </div>
+            <div class="search-input-field col-md-3">
+                <input id="neighborhood" type="text" class="form-control" placeholder="Bairro" aria-describedby="basic-addon1" onkeydown="addressToCoordinates()">
+            </div>
+        </div>
+    </form>
+
+    <div id="map"></div>
+
+    <!-- Division line -------------------------------------------------------------------------------------------------->
+    <hr id="about-us-div" class="div-hr">
+
+    <!-- About us -->
+    <h1 class="heading-1">Sobre nós</h1>
+    <div class="card-group">
+        <div class="card">
+            <img class="card-img-top rounded" src="images/about/leonardo.jpg" alt="Foto do Leonardo">
+            <div class="card-body">
+                <h3 class="card-title">Leonardo de Oliveira Saldanha</h3>
+                <h2 class="info">leoosaldanha@gmail.com</h2>
+                <h2 class="info">(35) 99966 2609</h2>
+            </div>
+
+            <div class="social-media-row row">
+                <div class="col-xs-6">
+                    <a href="https://www.facebook.com/leoosaldanha" target="_blank">
+                        <img class="social-icon rounded" src="images/icons/facebook.png">
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="https://www.linkedin.com/in/leonardo-de-oliveira-saldanha-b42004a8/" target="_blank">
+                        <img class="social-icon rounded" src="images/icons/linkedin.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top rounded" src="images/about/pedro.jpg" alt="Foto do Pedro">
+            <div class="card-body">
+                <h3 class="card-title">Pedro Marinho Zaroni</h3>
+                <h2 class="info">zaronipedro@outlook.com</h2>
+                <h2 class="info">(35) 99966 2609</h2>
+            </div>
+            <div class="social-media-row row">
+                <div class="col-xs-6">
+                    <a href="https://www.facebook.com/pedrozaroni" target="_blank">
+                        <img class="social-icon rounded" src="images/icons/facebook.png">
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="https://www.linkedin.com/in/pedrozaroni/" target="_blank">
+                        <img class="social-icon rounded" src="images/icons/linkedin.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top rounded" src="images/about/thiago.jpg" alt="Foto do Thiago">
+            <div class="card-body">
+                <h3 class="card-title">Thiago Mansur Gonçalves</h3>
+                <h2 class="info">thiagomansur@gec.inatel.br</h2>
+                <h2 class="info">(24) 98832-7946</h2>
+            </div>
+            <div class="social-media-row row">
+                <div class="col-xs-6">
+                    <a href="https://www.facebook.com/tmg100" target="_blank">
+                        <img class="social-icon rounded" src="images/icons/facebook.png">
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="https://www.linkedin.com/in/thiago-mansur-gon%C3%A7alves-734b2028/" target="_blank">
+                        <img class="social-icon rounded" src="images/icons/linkedin.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Division line -->
+    <hr class="div-hr">
+
+    <!-- Footer -->
+    <div class="footer">
+        <span>Icons made by
+            <a href="http://www.freepik.com" title="Freepik">Freepik</a> and
+            <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </span>
+    </div>
+
+    <!-- Firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD-YFUEpQBvJ3IbSPBYvr1_1DJf0r-_elI",
+            authDomain: "solidarimap.firebaseapp.com",
+            databaseURL: "https://solidarimap.firebaseio.com",
+            projectId: "solidarimap",
+            storageBucket: "",
+            messagingSenderId: "813230713899"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- ScrollTo script -->
+    <script type="text/javascript" src="js/scrollTo.js">
+    </script>
+
+    <!-- Google Maps customization script -->
+    <script type="text/javascript" src="js/custom-map.js">
+    </script>
+
+    <!-- Google Maps script -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQrbxIpHGL2DdKZ3fC6rHVCCMUF1Av-ew&callback=initMap">
+    </script>
+
+    <!-- Marker clusterer -->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
