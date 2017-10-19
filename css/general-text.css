@@ -14,3 +14,13 @@
     margin-left: 64px;
     margin-right: 64px;
 }
+
+.link {
+    cursor: pointer;
+    color:#a8c1d2;
+}
+
+.link:hover {
+    color:#a8c1d2;
+    text-decoration: none;
+}

@@ -26,16 +26,22 @@ function initMap() {
 
       //Set markers
       for (var i in object) {
-        info = 
-          '<h5>' + object[i].name + '</h5>' +
-          '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
-          '<p><b>Telefone:</b> ' + object[i].phone + '</p>';
-
+        info =
+        '<div class="panel panel-info">'+
+          '<div class="panel-heading">'+
+            '<h3 class="panel-title">'+object[i].name+'</h3>'+
+          '</div>'+
+          '<div class="panel-body">'+
+            '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
+            '<p><b>Telefone:</b> ' + object[i].phone + '</p>' +
+          '</div>'+
+        '</div>';
         geocodeAddress(geocoder, map, object[i].address, object[i].name, infowindow, info);
       }
     }
   };
-  request.open("GET", "https://raw.githubusercontent.com/mugbug/fetin-2017/master/fetin2017/static/js/data.json", true);
+  // Change this URL when get final JSON data
+  request.open("GET", "https://raw.githubusercontent.com/mugbug/fetin-2017/master/utils/data.json", true);
   request.send();
 }
 
@@ -43,15 +49,23 @@ function initMap() {
 function geocodeAddress(geocoder, resultsMap, address, name, infowindow, info) {
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
-      // resultsMap.setCenter(results[0].geometry.location);
+      // demo icon
+        var icons = {
+          ong: {
+            icon: 'https://i.imgur.com/62hXFAC.png'
+          },
+        };
+
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location,
-        title: name
+        title: name,
+        icon: icons['ong'].icon
       });
       
       marker.addListener('click', function () {
         infowindow.setContent(info);
+        infowindow.setOptions({maxWidth:400});
         infowindow.open(map, this);
       });
     } else {
