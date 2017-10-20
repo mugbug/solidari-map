@@ -1,6 +1,7 @@
-html, body, .container-fluid, .col-md-12 {
+html, body, .container-fluid, .row, .col-md-4, .col-md-12 {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .img-bg-start {
