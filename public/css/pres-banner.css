@@ -1,8 +1,18 @@
+html, body, .container-fluid, .row, .col-md-4, .col-md-12 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .img-bg-start {
-    position: relative;
+    /* position: relative;
     height: 100%;
     width: 100%;
-    max-height: auto\9; 
+    max-height: auto\9; */
+    width: auto;
+    display:block;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .title_logo {

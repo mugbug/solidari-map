@@ -2,7 +2,12 @@
     width: 900px;
     font-family: 'Lato', sans-serif;
     margin: auto;
-    padding: 32px;
+    /* padding: 32px; */
+}
+
+.card {
+    padding: 0;
+    margin: 0;
 }
 
 .card-img-top {
@@ -24,4 +29,16 @@
 
 .social-media-row {
     margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.facebook {
+    float: right;
+}
+.linkedin {
+    float: left;
+}
+
+.col-md-6 {
+    padding: 0;
 }
