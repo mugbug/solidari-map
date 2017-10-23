@@ -11,6 +11,16 @@
     text-indent: 2em;
     font-size: 21px;
     font-family: 'Lato', sans-serif;
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.link {
+    cursor: pointer;
+    color:#a8c1d2;
+}
+
+.link:hover {
+    color:#a8c1d2;
+    text-decoration: none;
 }

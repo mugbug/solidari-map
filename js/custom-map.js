@@ -11,7 +11,7 @@ function initMap() {
   var object
   var request = new XMLHttpRequest();
   var infowindow = new google.maps.InfoWindow();
-  
+
   //Initialize map
   geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
@@ -28,15 +28,15 @@ function initMap() {
       //Set markers
       for (var i in object) {
         info =
-        '<div class="panel panel-info">'+
-          '<div class="panel-heading">'+
-            '<h3 class="panel-title">'+object[i].name+'</h3>'+
-          '</div>'+
-          '<div class="panel-body">'+
-            '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
-            '<p><b>Telefone:</b> ' + object[i].phone + '</p>' +
-          '</div>'+
-        '</div>';
+          '<div class="panel panel-info">' +
+          '<div class="panel-heading">' +
+          '<h3 class="panel-title">' + object[i].name + '</h3>' +
+          '</div>' +
+          '<div class="panel-body">' +
+          '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
+          '<p><b>Telefone:</b> ' + object[i].phone + '</p>' +
+          '</div>' +
+          '</div>';
         geocodeAddress(geocoder, map, object[i].address, object[i].name, infowindow, info);
       }
     }
@@ -51,11 +51,11 @@ function geocodeAddress(geocoder, resultsMap, address, name, infowindow, info) {
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
       // demo icon
-        var icons = {
-          ong: {
-            icon: 'https://i.imgur.com/62hXFAC.png'
-          },
-        };
+      var icons = {
+        ong: {
+          icon: 'https://i.imgur.com/62hXFAC.png'
+        },
+      };
 
       var marker = new google.maps.Marker({
         map: resultsMap,
@@ -63,10 +63,10 @@ function geocodeAddress(geocoder, resultsMap, address, name, infowindow, info) {
         title: name,
         icon: icons['ong'].icon
       });
-      
+
       marker.addListener('click', function () {
         infowindow.setContent(info);
-        infowindow.setOptions({maxWidth:400});
+        infowindow.setOptions({ maxWidth: 400 });
         infowindow.open(map, this);
       });
 
@@ -91,14 +91,17 @@ function addressToCoordinates() {
     var state = document.getElementById('state').value;
     var city = document.getElementById('city').value;
     var neighborhood = document.getElementById('neighborhood').value;
-    var address = neighborhood + ', ' + city + ', ' + state;
+    var address;
 
     if (neighborhood == '') {
       map.setZoom(14);
+      neighborhood = 'Centro';
     }
     else {
       map.setZoom(15);
     }
+
+    address = neighborhood + ', ' + city + ', ' + state + ', Brasil';
 
     geocoder.geocode({ 'address': address }, function (results, status) {
       if (status == "OK") {
@@ -110,113 +113,113 @@ function addressToCoordinates() {
 
 var style = {
   retro: [
-    {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
-    {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
-    {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+    { elementType: 'geometry', stylers: [{ color: '#ebe3cd' }] },
+    { elementType: 'labels.text.fill', stylers: [{ color: '#523735' }] },
+    { elementType: 'labels.text.stroke', stylers: [{ color: '#f5f1e6' }] },
     {
       featureType: 'administrative',
       elementType: 'geometry.stroke',
-      stylers: [{color: '#c9b2a6'}]
+      stylers: [{ color: '#c9b2a6' }]
     },
     {
       featureType: 'administrative.land_parcel',
       elementType: 'geometry.stroke',
-      stylers: [{color: '#dcd2be'}]
+      stylers: [{ color: '#dcd2be' }]
     },
     {
       featureType: 'administrative.land_parcel',
       elementType: 'labels.text.fill',
-      stylers: [{color: '#ae9e90'}]
+      stylers: [{ color: '#ae9e90' }]
     },
     {
       featureType: 'landscape.natural',
       elementType: 'geometry',
-      stylers: [{color: '#dfd2ae'}]
+      stylers: [{ color: '#dfd2ae' }]
     },
     {
       featureType: 'poi',
       elementType: 'geometry',
-      stylers: [{color: '#dfd2ae'}]
+      stylers: [{ color: '#dfd2ae' }]
     },
     {
       featureType: 'poi',
       elementType: 'labels.text.fill',
-      stylers: [{color: '#93817c'}]
+      stylers: [{ color: '#93817c' }]
     },
     {
       featureType: 'poi.park',
       elementType: 'geometry.fill',
-      stylers: [{color: '#a5b076'}]
+      stylers: [{ color: '#a5b076' }]
     },
     {
       featureType: 'poi.park',
       elementType: 'labels.text.fill',
-      stylers: [{color: '#447530'}]
+      stylers: [{ color: '#447530' }]
     },
     {
       featureType: 'road',
       elementType: 'geometry',
-      stylers: [{color: '#f5f1e6'}]
+      stylers: [{ color: '#f5f1e6' }]
     },
     {
       featureType: 'road.arterial',
       elementType: 'geometry',
-      stylers: [{color: '#fdfcf8'}]
+      stylers: [{ color: '#fdfcf8' }]
     },
     {
       featureType: 'road.highway',
       elementType: 'geometry',
-      stylers: [{color: '#f8c967'}]
+      stylers: [{ color: '#f8c967' }]
     },
     {
       featureType: 'road.highway',
       elementType: 'geometry.stroke',
-      stylers: [{color: '#e9bc62'}]
+      stylers: [{ color: '#e9bc62' }]
     },
     {
       featureType: 'road.highway.controlled_access',
       elementType: 'geometry',
-      stylers: [{color: '#e98d58'}]
+      stylers: [{ color: '#e98d58' }]
     },
     {
       featureType: 'road.highway.controlled_access',
       elementType: 'geometry.stroke',
-      stylers: [{color: '#db8555'}]
+      stylers: [{ color: '#db8555' }]
     },
     {
       featureType: 'road.local',
       elementType: 'labels.text.fill',
-      stylers: [{color: '#806b63'}]
+      stylers: [{ color: '#806b63' }]
     },
     {
       featureType: 'transit.line',
       elementType: 'geometry',
-      stylers: [{color: '#dfd2ae'}]
+      stylers: [{ color: '#dfd2ae' }]
     },
     {
       featureType: 'transit.line',
       elementType: 'labels.text.fill',
-      stylers: [{color: '#8f7d77'}]
+      stylers: [{ color: '#8f7d77' }]
     },
     {
       featureType: 'transit.line',
       elementType: 'labels.text.stroke',
-      stylers: [{color: '#ebe3cd'}]
+      stylers: [{ color: '#ebe3cd' }]
     },
     {
       featureType: 'transit.station',
       elementType: 'geometry',
-      stylers: [{color: '#dfd2ae'}]
+      stylers: [{ color: '#dfd2ae' }]
     },
     {
       featureType: 'water',
       elementType: 'geometry.fill',
-      stylers: [{color: '#b9d3c2'}]
+      stylers: [{ color: '#b9d3c2' }]
     },
     {
       featureType: 'water',
       elementType: 'labels.text.fill',
-      stylers: [{color: '#92998d'}]
+      stylers: [{ color: '#92998d' }]
     }
   ],
 }
