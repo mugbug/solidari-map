@@ -1,0 +1,49 @@
+{
+    "ongs": [
+        {
+            "name": "ASSOCIAÇÃO ARTE E CULTURA SANTARRITENSE",
+            "address": "Alameda José Cleto Duarte, 10, Centro, Santa Rita do Sapucaí, Minas Gerais",
+            "phone": "35 9807 3658",
+            "location": {
+                "lat": -22.2534817,
+                "lng": -45.703937999999994
+            }
+        },
+        {
+            "name": "CRECHE DE SANTA RITA DO SAPUCAI",
+            "address": "Praça Santa Rita, 119, Centro, Santa Rita do Sapucaí, Minas Gerais",
+            "phone": "35 3471 1643",
+            "location": {
+                "lat": -22.2527111,
+                "lng": -45.7046795
+            }
+        },
+        {
+            "name": "FUNDAÇÃO DONA MINDOCA RENNÓ MOREIRA",
+            "address": "Avenida Sinhá Moreira, 350, Centro, Santa Rita do Sapucaí, Minas Gerais",
+            "phone": "35 3473 3600",
+            "location": {
+                "lat": -22.2562921,
+                "lng": -45.70345129999998
+            }
+        },
+        {
+            "name": "FUNDAÇÃO EDUCANDÁRIO SANTARRITENSE",
+            "address": "Rua Capitão João Antônio Dias, 123, Centro, Santa Rita do Sapucaí, Minas Gerais",
+            "phone": "35 3473 3000",
+            "location": {
+                "lat": -22.2512285,
+                "lng": -45.701631599999985
+            }
+        },
+        {
+            "name": "FUNDAÇÃO INSTITUTO NACIONAL DE TELECOMUNICAÇÕES",
+            "address": "Av. João de Camargo, 510, Centro, Santa Rita do Sapucaí, Minas Gerais",
+            "phone": "35 3471 9200",
+            "location": {
+                "lat": -22.2572862,
+                "lng": -45.69572800000003
+            }
+        }
+    ]
+}
