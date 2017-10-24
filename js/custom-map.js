@@ -37,25 +37,7 @@ function initMap() {
             '<p><b>Telefone:</b> ' + object[i].phone + '</p>' +
             '</div>' +
             '</div>';
-          // demo icon
-          var icons = {
-            ong: {
-              icon: 'https://i.imgur.com/62hXFAC.png'
-            },
-          };
-
-          var marker = new google.maps.Marker({
-            map: map,
-            position: object[i].location,
-            title: name,
-            icon: icons['ong'].icon
-          });
-
-          marker.addListener('click', function () {
-            infowindow.setContent(info);
-            infowindow.setOptions({ maxWidth: 400 });
-            infowindow.open(map, this);
-          });
+          generateMarker(map, object[i].address, object[i].name, object[i].location, infowindow, info);
         }
       }
     }
@@ -63,6 +45,28 @@ function initMap() {
   // Change this URL when get final JSON data
   request.open("GET", "https://raw.githubusercontent.com/mugbug/fetin-2017/develop/utils/ongs-updated.json", true);
   request.send();
+}
+
+function generateMarker(resultsMap, address, name, location, infowindow, info) {
+  // demo icon
+  var icons = {
+    ong: {
+      icon: 'https://i.imgur.com/62hXFAC.png'
+    },
+  };
+
+  var marker = new google.maps.Marker({
+    map: resultsMap,
+    position: location,
+    title: name,
+    icon: icons['ong'].icon
+  });
+
+  marker.addListener('click', function () {
+    infowindow.setContent(info);
+    infowindow.setOptions({ maxWidth: 400 });
+    infowindow.open(map, this);
+  });
 }
 
 function convertAddressToCoordinates(address) {
