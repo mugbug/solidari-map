@@ -22,9 +22,75 @@ function initMap() {
 
 // *** JSON 1 ***
 //Interval: 0 to 2499
-//Status: DONE 
+//Status: 
 function geocode1(geocoder, object) {
     var index = 0;
+    try_index = 0;
+    var timer = setInterval(function () {
+        if (index < 2500) {
+            console.log(index + ' - ' + object[index]);
+            geocodeAddress(geocoder, object, index);
+            if (flag == 'OK' || try_index >= 5) {
+                index++;
+                try_index = 0;
+            }
+        }
+        else {
+            clearInterval(timer);
+            generateJSON(object);
+        }
+    }, 100);
+}
+
+// *** JSON 2 ***
+//Interval: 2500 to 4999
+//Status: 
+function geocode2(geocoder, object) {
+    var index = 2500;
+    try_index = 0;
+    var timer = setInterval(function () {
+        if (index < 5000) {
+            console.log(index + ' - ' + object[index]);
+            geocodeAddress(geocoder, object, index);
+            if (flag == 'OK' || try_index >= 5) {
+                index++;
+                try_index = 0;
+            }
+        }
+        else {
+            clearInterval(timer);
+            generateJSON(object);
+        }
+    }, 100);
+}
+
+// *** JSON 3 ***
+//Interval: 5000 to 7499
+//Status: 
+function geocode3(geocoder, object) {
+    var index = 5000;
+    try_index = 0;
+    var timer = setInterval(function () {
+        if (index < 7500) {
+            console.log(index + ' - ' + object[index]);
+            geocodeAddress(geocoder, object, index);
+            if (flag == 'OK' || try_index >= 5) {
+                index++;
+                try_index = 0;
+            }
+        }
+        else {
+            clearInterval(timer);
+            generateJSON(object);
+        }
+    }, 100);
+}
+
+// *** JSON 4 ***
+//Interval: 7500 to 9999
+//Status: 
+function geocode4(geocoder, object) {
+    var index = 7500;
     try_index = 0;
     var timer = setInterval(function () {
         if (index < 10000) {
@@ -39,60 +105,6 @@ function geocode1(geocoder, object) {
             clearInterval(timer);
             generateJSON(object);
         }
-    }, 200);
-}
-
-// *** JSON 2 ***
-//Interval: 2500 to 4999
-//Status: DONE 
-function geocode2(geocoder, object) {
-    var index = 2500;
-    var timer = setInterval(function () {
-        console.log(object[index]);
-        if (index < 5000) {
-            geocodeAddress(geocoder, object, index);
-            index++;
-        }
-        else {
-            clearInterval(timer);
-            generateJSON(object);
-        }
-    }, 100);
-}
-
-// *** JSON 3 ***
-//Interval: 5000 to 7499
-//Status: DONE 
-function geocode3(geocoder, object) {
-    var index = 5000;
-    var timer = setInterval(function () {
-        console.log(object[index]);
-        if (index < 7500) {
-            geocodeAddress(geocoder, object, index);
-            index++;
-        }
-        else {
-            clearInterval(timer);
-            generateJSON(object);
-        }
-    }, 100);
-}
-
-// *** JSON 4 ***
-//Interval: 7500 to 9999
-//Status: DONE 
-function geocode4(geocoder, object) {
-    var index = 7500;
-    var timer = setInterval(function () {
-        console.log(object[index]);
-        if (index < 10000) {
-            geocodeAddress(geocoder, object, index);
-            index++;
-        }
-        else {
-            clearInterval(timer);
-            generateJSON(object);
-        }
     }, 100);
 }
 
@@ -101,11 +113,15 @@ function geocode4(geocoder, object) {
 //Status: DONE 
 function geocode5(geocoder, object) {
     var index = 10000;
+    try_index = 0;
     var timer = setInterval(function () {
-        console.log(object[index]);
         if (index < 12500) {
+            console.log(index + ' - ' + object[index]);
             geocodeAddress(geocoder, object, index);
-            index++;
+            if (flag == 'OK' || try_index >= 5) {
+                index++;
+                try_index = 0;
+            }
         }
         else {
             clearInterval(timer);
@@ -119,11 +135,15 @@ function geocode5(geocoder, object) {
 //Status: DONE
 function geocode6(geocoder, object) {
     var index = 12500;
+    try_index = 0;
     var timer = setInterval(function () {
-        console.log(object[index]);
         if (index < 15000) {
+            console.log(index + ' - ' + object[index]);
             geocodeAddress(geocoder, object, index);
-            index++;
+            if (flag == 'OK' || try_index >= 5) {
+                index++;
+                try_index = 0;
+            }
         }
         else {
             clearInterval(timer);
@@ -137,11 +157,15 @@ function geocode6(geocoder, object) {
 //Status: DONE
 function geocode7(geocoder, object) {
     var index = 15000;
+    try_index = 0;
     var timer = setInterval(function () {
-        console.log(object[index]);
         if (index < 17500) {
+            console.log(index + ' - ' + object[index]);
             geocodeAddress(geocoder, object, index);
-            index++;
+            if (flag == 'OK' || try_index >= 5) {
+                index++;
+                try_index = 0;
+            }
         }
         else {
             clearInterval(timer);
@@ -155,17 +179,21 @@ function geocode7(geocoder, object) {
 //Status: DONE 
 function geocode8(geocoder, object) {
     var index = 17500;
+    try_index = 0;
     var timer = setInterval(function () {
-        console.log(object[index]);
         if (index < 20000) {
+            console.log(index + ' - ' + object[index]);
             geocodeAddress(geocoder, object, index);
-            index++;
+            if (flag == 'OK' || try_index >= 5) {
+                index++;
+                try_index = 0;
+            }
         }
         else {
             clearInterval(timer);
             generateJSON(object);
         }
-    }, 50);
+    }, 100);
 }
 
 // *** JSON 9 ***
@@ -173,19 +201,21 @@ function geocode8(geocoder, object) {
 //Status: 
 function geocode9(geocoder, object) {
     var index = 20000;
+    try_index = 0;
     var timer = setInterval(function () {
-        console.log(object[index]);
         if (index < object.length) {
-            geocodeAddress(geocoder, object, index, flag);
-            if (flag == 'OK') {
+            console.log(index + ' - ' + object[index]);
+            geocodeAddress(geocoder, object, index);
+            if (flag == 'OK' || try_index >= 5) {
                 index++;
+                try_index = 0;
             }
         }
         else {
             clearInterval(timer);
             generateJSON(object);
         }
-    }, 50);
+    }, 100);
 }
 
 function geocodeAddress(geocoder, object, i) {
@@ -197,6 +227,10 @@ function geocodeAddress(geocoder, object, i) {
         }
         else if (status == 'ZERO_RESULTS') {
             object[i].address = null;
+            flag = status;
+            object[i].response = flag;
+        }
+        else {
             flag = status;
             object[i].response = flag;
         }
