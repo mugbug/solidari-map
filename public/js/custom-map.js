@@ -11,6 +11,7 @@ function initMap() {
   var object
   var request = new XMLHttpRequest();
   var infowindow = new google.maps.InfoWindow();
+  var markers = [];
 
   //Initialize map
   geocoder = new google.maps.Geocoder();
@@ -37,9 +38,17 @@ function initMap() {
             '<p><b>Telefone:</b> ' + object[i].phone + '</p>' +
             '</div>' +
             '</div>';
-          generateMarker(map, object[i].address, object[i].name, object[i].location, infowindow, info);
+          generateMarker(map, object[i].address, object[i].name, object[i].location, infowindow, info, markers);
         }
       }
+      console.log(markers)
+      // Add a marker clusterer to manage the markers.
+      var customCluster = {
+        gridSize: 50,
+        styles: clusterStyles,
+        maxZoom: 15
+      }
+      var markerCluster = new MarkerClusterer(map, markers, customCluster);
     }
   };
   // Change this URL when get final JSON data
@@ -47,17 +56,16 @@ function initMap() {
   request.send();
 }
 
-function generateMarker(resultsMap, address, name, location, infowindow, info) {
+function generateMarker(resultsMap, address, name, location, infowindow, info, markers) {
   // demo icon
   var icons = {
     ong: {
       icon: 'https://i.imgur.com/62hXFAC.png'
     },
   };
-
   var marker = new google.maps.Marker({
     map: resultsMap,
-    position: location,
+    position: new google.maps.LatLng(location),
     title: name,
     icon: icons['ong'].icon
   });
@@ -65,8 +73,10 @@ function generateMarker(resultsMap, address, name, location, infowindow, info) {
   marker.addListener('click', function () {
     infowindow.setContent(info);
     infowindow.setOptions({ maxWidth: 400 });
-    infowindow.open(map, this);
+    infowindow.open(resultsMap, this);
   });
+
+  markers.push(marker);
 }
 
 function convertAddressToCoordinates(address) {
@@ -103,6 +113,16 @@ function addressToCoordinates() {
     });
   }, 1000);
 }
+
+var clusterStyles = [
+  {
+    textColor: '#293136',
+    textSize: 16,
+    url: 'https://i.imgur.com/lmUHiKI.png',
+    height: 36,
+    width: 37
+  },
+];
 
 var style = {
   retro: [
