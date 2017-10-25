@@ -23,56 +23,49 @@ function initMap() {
   request.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       JSONobject = JSON.parse(this.responseText);
-      object = JSONobject.data;
-
+      object = JSONobject.ongs;
       //Set markers
       for (var i in object) {
-        info =
-          '<div class="panel panel-info">' +
-          '<div class="panel-heading">' +
-          '<h3 class="panel-title">' + object[i].name + '</h3>' +
-          '</div>' +
-          '<div class="panel-body">' +
-          '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
-          '<p><b>Telefone:</b> ' + object[i].phone + '</p>' +
-          '</div>' +
-          '</div>';
-        geocodeAddress(geocoder, map, object[i].address, object[i].name, infowindow, info);
+        if (object[i].address != null) {
+          info =
+            '<div class="panel panel-info">' +
+            '<div class="panel-heading">' +
+            '<h3 class="panel-title">' + object[i].name + '</h3>' +
+            '</div>' +
+            '<div class="panel-body">' +
+            '<p><b>Endereço:</b> ' + object[i].address + '</p>' +
+            '<p><b>Telefone:</b> ' + object[i].phone + '</p>' +
+            '</div>' +
+            '</div>';
+          generateMarker(map, object[i].address, object[i].name, object[i].location, infowindow, info);
+        }
       }
     }
   };
   // Change this URL when get final JSON data
-  request.open("GET", "https://raw.githubusercontent.com/mugbug/fetin-2017/master/utils/data.json", true);
+  request.open("GET", "https://raw.githubusercontent.com/mugbug/fetin-2017/develop/utils/ongs-updated.json", true);
   request.send();
 }
 
-// Set markers
-function geocodeAddress(geocoder, resultsMap, address, name, infowindow, info) {
-  geocoder.geocode({ 'address': address }, function (results, status) {
-    if (status === 'OK') {
-      // demo icon
-      var icons = {
-        ong: {
-          icon: 'https://i.imgur.com/62hXFAC.png'
-        },
-      };
+function generateMarker(resultsMap, address, name, location, infowindow, info) {
+  // demo icon
+  var icons = {
+    ong: {
+      icon: 'https://i.imgur.com/62hXFAC.png'
+    },
+  };
 
-      var marker = new google.maps.Marker({
-        map: resultsMap,
-        position: results[0].geometry.location,
-        title: name,
-        icon: icons['ong'].icon
-      });
+  var marker = new google.maps.Marker({
+    map: resultsMap,
+    position: location,
+    title: name,
+    icon: icons['ong'].icon
+  });
 
-      marker.addListener('click', function () {
-        infowindow.setContent(info);
-        infowindow.setOptions({ maxWidth: 400 });
-        infowindow.open(map, this);
-      });
-
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
+  marker.addListener('click', function () {
+    infowindow.setContent(info);
+    infowindow.setOptions({ maxWidth: 400 });
+    infowindow.open(map, this);
   });
 }
 
