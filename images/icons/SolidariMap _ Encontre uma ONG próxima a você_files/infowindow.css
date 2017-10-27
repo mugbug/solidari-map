@@ -1,0 +1,53 @@
+/* Custom Bootstrap CSS */
+  .panel {
+    margin-bottom: 0px;
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  }
+  .panel-body {
+    padding: 15px;
+    padding-bottom: 0;
+  }
+  .panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .panel-heading > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+  .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+  }
+  .panel-title > a,
+  .panel-title > small,
+  .panel-title > .small,
+  .panel-title > small > a,
+  .panel-title > .small > a {
+    color: inherit;
+  }
+  .panel-info {
+    border-color: #bce8f1;
+  }
+  .panel-info > .panel-heading {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+  }
+  .panel-info > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #bce8f1;
+  }
+  .panel-info > .panel-heading .badge {
+    color: #d9edf7;
+    background-color: #31708f;
+  }
+  .panel-info > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #bce8f1;
+  }

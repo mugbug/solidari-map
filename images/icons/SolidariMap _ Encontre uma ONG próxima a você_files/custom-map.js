@@ -41,6 +41,7 @@ function initMap() {
           generateMarker(map, object[i].address, object[i].name, object[i].location, infowindow, info, markers);
         }
       }
+      console.log(markers)
       // Add a marker clusterer to manage the markers.
       var customCluster = {
         gridSize: 50,

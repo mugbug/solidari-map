@@ -6,6 +6,7 @@
     <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type"  content="text/html charset=UTF-8" />
 
     <!-- External fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -122,8 +123,8 @@
                     que se encontram em sua região.</p>
                 <p class="paragraph">O SolidariMap é um site que visa facilitar o encontro entre os voluntários e as Organizações Não Governamentais,
                     ao proporcionar um
-                    <spam class="link" onclick="EPPZScrollTo.scrollVerticalToElementById('map-div', 0);">mapa interativo</spam> com marcadores, que 
-                    indicam a localização de diversas ONGs ao redor do país. Todos os dados indicados no mapa são fornecidos pela
+                    <spam class="link" onclick="EPPZScrollTo.scrollVerticalToElementById('map-div', 0);">mapa interativo</spam> com marcadores, que indicam a localização de diversas ONGs ao redor do país. Todos
+                    os dados indicados no mapa são fornecidos pela
                     <a class="link" target="_blank" href="http://ongsbrasil.com.br/" target="_blank">OngsBrasil</a>.</p>
                 <p class="paragraph">O projeto ainda está em fase de desenvolvimento e no momento conta com apenas uma parcela da grande quantidade
                     de organizações brasileiras. Em breve novas ONGs serão adicionadas.
@@ -254,6 +255,52 @@
     </div>
 
     <!-- Division line -------------------------------------------------------------------------------------------------->
+    <hr id="register-ong" class="div-hr">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="heading-1">Não encontrou alguma ONG?</h1>
+                <h1 class="heading-1" style="padding-bottom: 8px">Cadastre ela aqui!</h1>
+                <form action="mailto:zaronipedro@outlook.com?subject=SolidariMap" method="POST" 
+                    enctype="text/plain" onsubmit="alert('Obrigado por ajudar a melhorar nosso mapa!')"
+                    accept-charset="ISO-8859-1">
+                    <div class="search-input form-row">
+                        <div class="form-group search-input-field col-md-12">
+                            <label for="name" class="register-input-label">Nome da ONG:</label>
+                            <input id="name" name="name" type="text/html" class="form-control" placeholder="Fundação Instituto Nacional de Telecomunicações">
+                        </div>
+                    </div>
+                    <div class="search-input form-row">
+                        <div class="search-input-field col-md-6">
+                            <label for="address" class="register-input-label">Endereço:</label>
+                            <input id="address" name="address" type="text" class="form-control" placeholder="Av. João de Camargo, 510 - Centro">
+                        </div>
+                        <div class="search-input-field col-md-3">
+                            <label for="city" class="register-input-label">Cidade:</label>
+                            <input id="city" name="city" type="text" class="form-control" placeholder="Santa Rita do Sapucaí">
+                        </div>
+                        <div class="search-input-field col-md-3">
+                            <label for="state" class="register-input-label">Estado:</label>
+                            <input id="state" name="state" type="text" class="form-control" placeholder="MG">
+                        </div>
+                    </div>
+                    <div class="search-input form-row">
+                        <div class="search-input-field col-md-10">
+                            <label for="contact" class="register-input-label">Contato:</label>
+                            <input id="contact" name="contact" type="text" class="form-control" placeholder="http://www.inatel.br/sae/bolsa-finatel">
+                        </div>
+                        <div class="col-md-2">
+                            <input id="submit" class="btn btn-default" style="width: 100%; margin-top: 14.8%" type="submit" value="Enviar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Division line -------------------------------------------------------------------------------------------------->
     <hr id="contact-us-div" class="div-hr">
 
     <div class="container-fluid">
@@ -338,7 +385,7 @@
         <br>
         <span>
             O projeto é open-source e você pode acessar o código fonte e contribuir através do nosso repositório no
-            <a href="https://github.com/mugbug/fetin-2017" target="_blank">GitHub</a>.
+            <a class="link" href="https://github.com/mugbug/fetin-2017" target="_blank">GitHub</a>.
         </span>
         <br>
         <br>
