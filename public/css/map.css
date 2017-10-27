@@ -18,6 +18,10 @@
     padding-right: 8px;
 }
 
+.register-input-label {
+    float: left;
+}
+
 .right-md {
     margin-right: 0px;
 }
