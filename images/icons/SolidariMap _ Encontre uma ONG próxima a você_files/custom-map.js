@@ -52,7 +52,7 @@ function initMap() {
     }
   };
   // Change this URL when get final JSON data
-  request.open("GET", "https://raw.githubusercontent.com/mugbug/fetin-2017/develop/utils/ongs-updated.json", true);
+  request.open("GET", "https://raw.githubusercontent.com/mugbug/solidari-map/develop/utils/ongs-updated.json", true);
   request.send();
 }
 
